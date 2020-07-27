@@ -14,7 +14,9 @@ require_once('Hero.php');
 </head>
 <body>
     <?php
-        $personnage = new Hero('Excalibur', 350, 'Bouclier de Doran', 1500, 1800, 20);
+        $personnage = new Hero('Excalibur', 2000, 'Bouclier de Doran', 1500, 1800, 20);
+        $personnage->attacked(2000);
+        echo $personnage->getHealth();
     ?>
 </body>
 </html>

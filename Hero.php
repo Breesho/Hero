@@ -9,12 +9,15 @@ class Hero extends Character {
     public function getWeapon() {
         return $this->weapon;
     }
+
     public function getWeaponDamage() {
         return $this->weaponDamage;
     }
+
     public function getShield() {
         return $this->shield;
     }
+
     public function getShieldValue() {
         return $this->shieldValue;
     }
@@ -22,15 +25,19 @@ class Hero extends Character {
     public function setWeapon($weaponName) {
         $this->weapon = $weaponName;
     }
+
     public function setWeaponDamage($weaponDamageValue) {
         $this->weaponDamage = $weaponDamageValue;
     }
+
     public function setShield($shieldName) {
         $this->shield = $shieldName;
     }
+    
     public function setShieldValue($shieldDefenseValue) {
         $this->shieldValue = $shieldDefenseValue;
     }
+
     public function __construct($weaponName, $weaponDamageValue, $shieldName, $shieldDefenseValue, $healthValue, $rageValue) {
         parent::__construct($healthValue, $rageValue);
 
@@ -46,5 +53,10 @@ class Hero extends Character {
         echo 'Dommages: ' . $this->getWeaponDamage() . '<br>';
         echo 'Bouclier: ' . $this->getShield() . '<br>';
         echo 'Defense: ' . $this->getShieldValue() . '<br>';
+    }
+
+    public function attacked($attackValue) {
+        $newHealth = $this->getHealth() - ($attackValue - $this->getShieldValue());
+        $this->setHealth($newHealth);
     }
 }
