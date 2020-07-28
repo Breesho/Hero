@@ -21,7 +21,8 @@ class Orc extends Character {
     
     }
 
-    public function OrcAttacked() {
+    public function OrcAttack() {
         $this->setDamage(rand(600, 800));
     }
+
 }

@@ -61,6 +61,6 @@ class Hero extends Character {
     }
 
     public function addRage() {
-     $this->setRage($this->getRage() + 30) ;
+     $this->setRage($this->getRage() + 20) ;
     }
 }
