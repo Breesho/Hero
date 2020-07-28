@@ -46,13 +46,13 @@ class Hero extends Character {
         $this->shield = $shieldName;
         $this->shieldValue = $shieldDefenseValue;
 
-        echo 'Vous venez de créer votre hero !<br>';
-        echo 'Vie: ' . $this->getHealth() . '<br>';
-        echo 'Rage: ' . $this->getRage() . '<br>';
-        echo 'Arme: ' . $this->getWeapon() . '<br>';
-        echo 'Dommages: ' . $this->getWeaponDamage() . '<br>';
-        echo 'Bouclier: ' . $this->getShield() . '<br>';
-        echo 'Defense: ' . $this->getShieldValue() . '<br>';
+        echo '<h1>Vous venez de créer votre hero !</h1>';
+        echo '<h2>Vie: ' . $this->getHealth() . '</h2>';
+        echo '<h2>Rage: ' . $this->getRage() . '</h2>';
+        echo '<h2>Arme: ' . $this->getWeapon() . '</h2>';
+        echo '<h2>Dommages: ' . $this->getWeaponDamage() . '</h2>';
+        echo '<h2>Bouclier: ' . $this->getShield() . '</h2>';
+        echo '<h2>Defense: ' . $this->getShieldValue() . '</h2>';
     }
 
     public function attacked($attackValue) {
